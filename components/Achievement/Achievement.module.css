@@ -1,0 +1,122 @@
+.achievement__box:first-of-type {
+  position: relative;
+  animation: left_to_right 1s ease-out;
+}
+
+.achievement__box:last-of-type {
+  position: relative;
+  animation: right_to_left 1s ease-out;
+}
+
+.achievement__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 9.6rem;
+}
+
+.achievement__list_item {
+  width: calc(50% - 0.8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem 0rem;
+  background-color: rgb(21, 33, 73);
+  padding: 2.4rem;
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.achievement__list_item:nth-of-type(odd) {
+  margin-right: 1.6rem;
+  position: relative;
+  top: 7rem;
+}
+
+.achievement__list_item:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(75, 161, 216),
+    rgb(68, 100, 189) 95%
+  );
+}
+
+.achievement__value {
+  margin: 2.2rem 0 1.6rem 0;
+}
+
+.achievement__label {
+  font-weight: 700;
+}
+
+.achievement__title_label {
+  margin-top: 1.6rem;
+  letter-spacing: 0.05rem;
+  line-height: 200%;
+}
+
+.achievement__button {
+  cursor: pointer;
+  margin-top: 3.6rem;
+}
+
+@media (min-width: 768px) {
+  .achievement {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .achievement__box {
+    width: calc(50% - 1.6rem);
+  }
+
+  .achievement__box:first-of-type {
+    margin-right: 3.2rem;
+  }
+
+  .achievement__list_item {
+    padding: 4.8rem 2.4rem;
+  }
+
+  .achievement__title_label {
+    margin-top: 3.2rem;
+  }
+
+  .achievement__button {
+    margin-top: 5.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .achievement__box {
+    width: calc(50% - 4.8rem);
+  }
+
+  .achievement__box:first-of-type {
+    margin-right: 9.6rem;
+  }
+}
+
+@keyframes left_to_right {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right_to_left {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,76 @@
+.fundRaising {
+  text-align: center;
+}
+
+.fundRaising__box:first-of-type {
+  margin-bottom: 4.8rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: left_to_right 1s ease-out;
+}
+
+.fundRaising__box:last-of-type {
+  position: relative;
+  animation: right_to_left 1s ease-out;
+}
+
+.fundRaising__description {
+  margin: 1.6rem 0 4.8rem 0;
+  letter-spacing: 0.05rem;
+  line-height: 200%;
+}
+
+@media (min-width: 768px) {
+  .fundRaising {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+  }
+
+  .fundRaising__box {
+    width: calc(50% - 1.6rem);
+  }
+
+  .fundRaising__box:first-of-type {
+    margin-bottom: 0;
+    margin-right: 3.2rem;
+  }
+
+  .fundRaising__description {
+    margin-top: 3.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .fundRaising__box {
+    width: calc(50% - 4.8rem);
+  }
+
+  .fundRaising__box:first-of-type {
+    margin-right: 9.6rem;
+  }
+}
+
+@keyframes left_to_right {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right_to_left {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

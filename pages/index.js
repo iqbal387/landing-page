@@ -1,65 +1,56 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import Nav from "../components/Nav/Nav";
+import Banner from "../components/Banner/Banner";
+import Time from "../components/Time/Time";
+import Feature from "../components/Feature/Feature";
+import Achievement from "../components/Achievement/Achievement";
+import Investment from "../components/Investment/Investment";
+import FundRaising from "../components/FundRaising/FundRaising";
+import Privacy from "../components/Privacy/Privacy";
+import MobileApp from "../components/MobileApp/MobileApp";
+import Location from "../components/Location/Location";
+import Question from "../components/Question/Question";
+import Footer from "../components/Footer/Footer";
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+const Home = () => (
+  <>
+    <Head>
+      <title>iqbalh.dev</title>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <meta name="title" content="iqbalh.dev" />
+      <meta name="subject" content="Portfolio" />
+      <meta name="description" content="Portfolio Frontend Developer" />
+      <meta name="format" content="text/html" />
+      <meta name="publisher" content="Iqbal Hasan" />
+      <meta name="language" content="en" />
+      <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </Head>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+    <Nav />
+    <main className="container">
+      <Banner />
+      <Time />
+      <Feature />
+      <Achievement />
+      <Investment />
+      <FundRaising />
+      <Privacy />
+      <MobileApp />
+      <Location />
+      <Question />
+      <Footer />
+    </main>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+    <footer></footer>
+  </>
+);
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default Home;

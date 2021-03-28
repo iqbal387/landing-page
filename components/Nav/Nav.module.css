@@ -1,0 +1,36 @@
+.nav {
+  background-color: rgb(8, 21, 63);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nav__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  text-transform: uppercase;
+}
+
+.nav__menus {
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu {
+  padding: 2.4rem 1.8rem;
+  cursor: pointer;
+}
+
+.nav__menu:hover {
+  font-weight: 700;
+}
+
+.nav__button {
+  margin-left: 0.8rem;
+}

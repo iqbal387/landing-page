@@ -1,0 +1,74 @@
+.banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.banner__box {
+  max-width: 45rem;
+  position: relative;
+  animation: bottom_to_top 1s ease-out;
+}
+
+.banner__image {
+  position: relative;
+  animation: right_to_left 1s ease-out;
+}
+
+.banner__discount {
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  background-color: rgb(26, 29, 95);
+  border-radius: 10rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+}
+
+.banner__discount_title {
+  color: rgb(64, 224, 219);
+  margin-right: 0.4rem;
+}
+
+.banner__title {
+  margin: 2.4rem 0;
+}
+
+.banner__description {
+  color: rgb(73, 107, 150);
+  line-height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.banner__button_box {
+  display: flex;
+  align-items: center;
+}
+
+.banner__button:first-of-type {
+  margin-right: 1.6rem;
+}
+
+@keyframes bottom_to_top {
+  from {
+    top: 50vh;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right_to_left {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
