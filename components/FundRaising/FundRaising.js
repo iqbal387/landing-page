@@ -6,7 +6,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 
 import styles from "./FundRaising.module.css";
 
-const FundRaising = () => {
+const FundRaising = ({ fundRef }) => {
   // size
   const size = useWindowSize();
 
@@ -21,7 +21,7 @@ const FundRaising = () => {
 
   return (
     <VisibilitySensor onChange={onChange}>
-      <section className={styles.fundRaising}>
+      <section className={styles.fundRaising} ref={fundRef}>
         {isVisible && (
           <>
             <div className={styles.fundRaising__box}>

@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./Location.module.css";
 
-const Location = () => {
+const Location = ({ locationRef }) => {
   // state
   const [isVisible, setIsVisible] = useState(false);
 
@@ -16,7 +16,7 @@ const Location = () => {
 
   return (
     <VisibilitySensor onChange={onChange}>
-      <section>
+      <section ref={locationRef}>
         {isVisible && (
           <div className={styles.location}>
             <h2>More than 3 Bilion worldwide use</h2>

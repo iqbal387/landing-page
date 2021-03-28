@@ -27,7 +27,7 @@ const questions = [
   },
 ];
 
-const Question = () => {
+const Question = ({ faqRef }) => {
   // state
   const [show, setShow] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +43,7 @@ const Question = () => {
 
   return (
     <VisibilitySensor onChange={onChange}>
-      <section>
+      <section ref={faqRef}>
         {isVisible && (
           <div className={styles.question}>
             <h2>Have Any Question ?</h2>

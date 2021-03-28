@@ -31,7 +31,7 @@ const features = [
   },
 ];
 
-const Feature = () => {
+const Feature = ({ featureRef }) => {
   // state
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,7 +43,7 @@ const Feature = () => {
 
   return (
     <VisibilitySensor onChange={onChange}>
-      <section>
+      <section ref={featureRef}>
         {isVisible && (
           <div className={styles.feature}>
             <h2>Why you choose TheCoin</h2>
